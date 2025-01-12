@@ -1,0 +1,6 @@
+@EuroBackend_HostAddress = http://localhost:5192
+
+GET {{EuroBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
