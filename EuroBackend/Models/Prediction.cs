@@ -23,10 +23,10 @@ namespace EuroBackend.Models
 
     public class MatchResult
     {
-        
+        [BsonElement("scoreA")]
         public int ScoreA { get; set; }
 
-        
+        [BsonElement("scoreB")]
         public int ScoreB { get; set; }
     }
 }

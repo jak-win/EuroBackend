@@ -36,7 +36,7 @@ namespace EuroBackend.Services
         public async Task AddPrediction(string group, int matchIndex, MatchResult matchResult)
         {
             var prediction = await _predictions.Find(p => p.Group == group && p.MatchIndex == matchIndex).FirstOrDefaultAsync();
-            if (prediction != null)
+            if (prediction == null)
             {
                 prediction = new Prediction
                 { Group = group, MatchIndex = matchIndex, UsersPredictions = new List<MatchResult> { matchResult } };
